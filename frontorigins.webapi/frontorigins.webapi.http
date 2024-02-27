@@ -1,0 +1,6 @@
+@frontorigins.webapi_HostAddress = http://localhost:5261
+
+GET {{frontorigins.webapi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
