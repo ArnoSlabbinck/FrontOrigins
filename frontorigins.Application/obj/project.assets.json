@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Thinkpad\\source\\repos\\frontorigins\\frontorigins.Application\\frontorigins.Application.csproj",
+      "projectUniqueName": "C:\\Users\\Thinkpad\\Source\\Repos\\FrontOrigins\\frontorigins.Application\\frontorigins.Application.csproj",
       "projectName": "frontorigins.Application",
-      "projectPath": "C:\\Users\\Thinkpad\\source\\repos\\frontorigins\\frontorigins.Application\\frontorigins.Application.csproj",
+      "projectPath": "C:\\Users\\Thinkpad\\Source\\Repos\\FrontOrigins\\frontorigins.Application\\frontorigins.Application.csproj",
       "packagesPath": "C:\\Users\\Thinkpad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Thinkpad\\source\\repos\\frontorigins\\frontorigins.Application\\obj\\",
+      "outputPath": "C:\\Users\\Thinkpad\\Source\\Repos\\FrontOrigins\\frontorigins.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Thinkpad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,6 +28,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
