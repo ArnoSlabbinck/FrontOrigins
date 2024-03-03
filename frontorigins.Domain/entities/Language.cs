@@ -2,13 +2,16 @@
 
 namespace frontorigins.Domain.entities
 {
-    public class Language : BaseEntitiy
+    public class Language : BaseEntity
     {
+        public Language(long id) : base(id)
+        {
+        }
+
         private string name { get; set; }
 
         private string level { get; set; }
 
-
-        public Language() { }
+        private ICollection<Employee> employees { get; set; }
     }
 }

@@ -7,17 +7,23 @@ using System.Threading.Tasks;
 
 namespace frontorigins.Domain.entities
 {
-    public class Skill : BaseEntitiy
+    public class Skill : BaseEntity
     {
-        private string name { get; set; }
+        private string name;
 
-        private string category { get; set; }
+        private string category;
 
-        private string notes { get; set; }
+        private string notes;
 
-        private string level { get; set; }
+        private string level;
 
+        public Skill(long id) : base(id)
+        {
+        }
 
-        public Skill() { }
+        public string Name { get => name; set => name = value; }
+        public string Category { get => category; set => category = value; }
+        public string Notes { get => notes; set => notes = value; }
+        public string Level { get => level; set => level = value; }
     }
 }

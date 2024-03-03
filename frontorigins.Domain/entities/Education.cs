@@ -7,19 +7,29 @@ using System.Threading.Tasks;
 
 namespace frontorigins.Domain.entities
 {
-    public class Education : BaseEntitiy
+    public class Education : BaseEntity
     {
-        private string institutionName { get; set; }
+        private string institutionName;
 
-        private string degreeLevel { get; set; }
+        private string degreeLevel;
 
-        private string description { get; set; }
+        private string description;
 
-        private DateTime yearBeginning { get; set; }
+        private DateTime yearBeginning;
 
-        private DateTime yearCompletion { get; set; }
+        private DateTime yearCompletion;
 
-        private string major { get; set; }
-        public Education() { }
+        private string major;
+
+        public Education(long id) : base(id)
+        {
+        }
+
+        public string InstitutionName { get => institutionName; set => institutionName = value; }
+        public string DegreeLevel { get => degreeLevel; set => degreeLevel = value; }
+        public string Description { get => description; set => description = value; }
+        public DateTime YearBeginning { get => yearBeginning; set => yearBeginning = value; }
+        public DateTime YearCompletion { get => yearCompletion; set => yearCompletion = value; }
+        public string Major { get => major; set => major = value; }
     }
 }

@@ -2,22 +2,27 @@
 
 namespace frontorigins.Domain.entities
 {
-    public class Location : BaseEntitiy
+    public class Location : BaseEntity
     {
 
-        private string streetAddress { get; set; }
+        private string streetAddress;
 
-        private string city { get; set; }
+        private string city;
 
-        private string state { get; set; }
+        private string state;
 
-        private string zipCode { get; set; }
+        private string zipCode;
 
-        private string country { get; set; }
+        private string country;
 
-        public Location()
+        public Location(long id) : base(id)
         {
-
         }
+
+        public string StreetAddress { get => streetAddress; set => streetAddress = value; }
+        public string City { get => city; set => city = value; }
+        public string State { get => state; set => state = value; }
+        public string ZipCode { get => zipCode; set => zipCode = value; }
+        public string Country { get => country; set => country = value; }
     }
 }

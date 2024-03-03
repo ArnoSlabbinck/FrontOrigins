@@ -2,11 +2,17 @@
 
 namespace frontorigins.Domain.entities
 {
-    public class Departement : BaseEntitiy
+    public class Departement : BaseEntity
     {
-        private string sector { get; set; }
+        private string sector;
 
-        private Location Location { get; set; }
-        public Departement() { }
+        private Location Location;
+
+        public Departement(long id) : base(id)
+        {
+        }
+
+        public string Sector { get => sector; set => sector = value; }
+        public Location Location1 { get => Location; set => Location = value; }
     }
 }
