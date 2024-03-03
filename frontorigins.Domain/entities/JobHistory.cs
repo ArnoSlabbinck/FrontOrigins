@@ -2,19 +2,28 @@
 
 namespace frontorigins.Domain.entities
 {
-    public class JobHistory : BaseEntitiy
+    public class JobHistory : BaseEntity
     {
-        private string title { get; set; }
+        private string title;
 
-        private string description { get; set; }
+        private string description;
 
-        private string supervisorName { get; set; }
+        private string supervisorName;
 
-        private string supervisorContact { get; set; }
+        private string supervisorContact;
 
-        private DateTime employementStartDate { get; set; }
+        private DateTime employementStartDate;
+        private DateTime employmentEndDate;
 
-        private DateTime employmentEndDate { get; set; }
-        public JobHistory() { }
+        public JobHistory(long id) : base(id)
+        {
+        }
+
+        public string Title { get => title; set => title = value; }
+        public string Description { get => description; set => description = value; }
+        public string SupervisorName { get => supervisorName; set => supervisorName = value; }
+        public string SupervisorContact { get => supervisorContact; set => supervisorContact = value; }
+        public DateTime EmployementStartDate { get => employementStartDate; set => employementStartDate = value; }
+        public DateTime EmploymentEndDate { get => employmentEndDate; set => employmentEndDate = value; }
     }
 }

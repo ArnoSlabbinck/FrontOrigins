@@ -7,23 +7,29 @@ using System.Threading.Tasks;
 
 namespace frontorigins.Domain.entities
 {
-    public class Organization : BaseEntitiy
+    public class Organization : BaseEntity
     {
-        private string description { get; set; }
+        private string description;
 
-        private string name { get; set; }
+        private string name;
 
-        private string phone { get; set; }
+        private string phone;
 
-        private string taxNumber { get; set; }
+        private string taxNumber;
 
-        private Location location { get; set; }
+        private Location location;
 
-        ICollection<Departement> departements { get; set; }
+        private ICollection<Departement> departements;
 
+        public Organization(long id) : base(id)
+        {
+        }
 
-
-
-        public Organization() { }
+        public string Description { get => description; set => description = value; }
+        public string Name { get => name; set => name = value; }
+        public string Phone { get => phone; set => phone = value; }
+        public string TaxNumber { get => taxNumber; set => taxNumber = value; }
+        public Location Location { get => location; set => location = value; }
+        public ICollection<Departement> Departements { get => departements; set => departements = value; }
     }
 }

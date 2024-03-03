@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace frontorigins.Domain.entities
 {
-    public class BusinessEquitement : BaseEntitiy
+    public class BusinessRequirement : BaseEntity
     {
         private string name;
 
@@ -13,22 +13,20 @@ namespace frontorigins.Domain.entities
 
         private bool isAvailable;
 
-        private EquimentCondition condition;
+        private EquipmentCondition condition;
 
-        private LendingEquitment lending;
-        public BusinessEquitement() { }
+        private LendingEquipment lending;
 
-        public BusinessEquitement(string name, string description, DateTime purchaseDate, bool isAvailable, EquimentCondition condition, LendingEquitment lending)
+        public BusinessRequirement(long id) : base(id)
         {
-            Name = name;
-            Description = description;
-            PurchaseDate = purchaseDate;
-            IsAvailable = isAvailable;
-            Condition = condition;
-            Lending = lending;
         }
 
         public string Name { get => name; set => name = value; }
+        public string Description { get => description; set => description = value; }
+        public DateTime PurchaseDate { get => purchaseDate; set => purchaseDate = value; }
+        public bool IsAvailable { get => isAvailable; set => isAvailable = value; }
+        public LendingEquipment Lending { get => lending; set => lending = value; }
+        internal EquipmentCondition Condition { get => condition; set => condition = value; }
 
         public override bool Equals(object? obj)
         {
