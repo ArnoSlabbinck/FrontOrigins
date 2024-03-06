@@ -21,6 +21,16 @@ namespace frontorigins.Domain.entities
         {
         }
 
+        public BusinessRequirement(long id, string name, string description, DateTime purchaseDate, bool isAvailable, EquipmentCondition condition, LendingEquipment lending) : base(id)
+        {
+            this.name = name;
+            this.description = description;
+            this.purchaseDate = purchaseDate;
+            this.isAvailable = isAvailable;
+            this.condition = condition;
+            this.lending = lending;
+        }
+
         public string Name { get => name; set => name = value; }
         public string Description { get => description; set => description = value; }
         public DateTime PurchaseDate { get => purchaseDate; set => purchaseDate = value; }
