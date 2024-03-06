@@ -27,6 +27,18 @@ namespace frontorigins.Domain.entities
 
         private Employee employee;
 
+        public User(string firstname, string lastname, string userName, bool isApproved, bool isLocketOut, DateTime createdDate, DateTime? lastModifiedDate, DateTime? lastLockOutDate, Employee employee)
+        {
+            this.firstname = firstname;
+            this.lastname = lastname;
+            UserName = userName;
+            IsApproved = isApproved;
+            this.isLocketOut = isLocketOut;
+            CreatedDate = createdDate;
+            LastModifiedDate = lastModifiedDate;
+            LastLockOutDate = lastLockOutDate;
+            this.employee = employee;
+        }
 
         public string Firstname { get => firstname; set => firstname = value; }
         public string Lastname { get => lastname; set => lastname = value; }
