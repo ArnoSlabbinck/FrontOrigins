@@ -21,13 +21,7 @@ namespace frontorigins.Domain.entities
         {
         }
 
-        public Skill(long id, string name, string category, string notes, string level) : base(id)
-        {
-            this.name = name;
-            this.category = category;
-            this.notes = notes;
-            this.level = level;
-        }
+       
 
         public string Name { get => name; set => name = value; }
         public string Category { get => category; set => category = value; }

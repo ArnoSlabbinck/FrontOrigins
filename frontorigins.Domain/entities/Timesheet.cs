@@ -24,18 +24,7 @@ namespace frontorigins.Domain.entities
         {
         }
 
-        public Timesheet(long id, DateTime workDay, TimeOnly startTime, TimeOnly endTime, TimeOnly overtime, int workingHours, string timesheetStatus, bool isHoliday, string comment) : base(id)
-        {
-            this.workDay = workDay;
-            this.startTime = startTime;
-            this.endTime = endTime;
-            Overtime = overtime;
-            this.workingHours = workingHours;
-            this.timesheetStatus = timesheetStatus;
-            this.isHoliday = isHoliday;
-            this.comment = comment;
-        }
-
+       
         public DateTime WorkDay { get => workDay; set => workDay = value; }
         public TimeOnly StartTime { get => startTime; set => startTime = value; }
         public TimeOnly EndTime { get => endTime; set => endTime = value; }

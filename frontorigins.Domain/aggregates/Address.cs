@@ -26,7 +26,6 @@ namespace frontorigins.Domain.aggregates
         }
 
         public static Address Create(string streetAddress, string city, string state, string zipCode, string country)
-        {
             // Check street and zipCode validity
 
             return new Address(streetAddress, city, state, zipCode, country);

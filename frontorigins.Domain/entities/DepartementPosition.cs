@@ -17,12 +17,6 @@ namespace frontorigins.Domain.entities
         {
         }
 
-        public DepartmentPosition(long id, Employee employee, Position position) : base(id)
-        {
-            this.employee = employee;
-            this.position = position;
-        }
-
         public Employee Employee { get => employee; set => employee = value; }
         public Position Position { get => position; set => position = value; }
 

@@ -19,16 +19,7 @@ namespace frontorigins.Domain.entities
         {
         }
 
-        public WorkExperience(long id, string title, string description, string supervisorName, string supervisorContact, DateTime employementStartDate, DateTime employmentEndDate) : base(id)
-        {
-            this.title = title;
-            this.description = description;
-            this.supervisorName = supervisorName;
-            this.supervisorContact = supervisorContact;
-            this.employementStartDate = employementStartDate;
-            this.employmentEndDate = employmentEndDate;
-        }
-
+        
         public string Title { get => title; set => title = value; }
         public string Description { get => description; set => description = value; }
         public string SupervisorName { get => supervisorName; set => supervisorName = value; }

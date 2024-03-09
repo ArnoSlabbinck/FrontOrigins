@@ -9,45 +9,23 @@ namespace frontorigins.Domain.entities
 {
     public class User : IdentityUser
     {
-        private string firstname;
-
-        private string lastname;
-
-
-        private string UserName;
-        private bool IsApproved;
-
-        private bool isLocketOut;
-
-        private DateTime CreatedDate;
-
-        private DateTime? LastModifiedDate;
-
-        private DateTime? LastLockOutDate;
-
         private Employee employee;
 
-        public User(string firstname, string lastname, string userName, bool isApproved, bool isLocketOut, DateTime createdDate, DateTime? lastModifiedDate, DateTime? lastLockOutDate, Employee employee)
-        {
-            this.firstname = firstname;
-            this.lastname = lastname;
-            UserName = userName;
-            IsApproved = isApproved;
-            this.isLocketOut = isLocketOut;
-            CreatedDate = createdDate;
-            LastModifiedDate = lastModifiedDate;
-            LastLockOutDate = lastLockOutDate;
-            this.employee = employee;
-        }
+        private bool isApproved = false;
 
-        public string Firstname { get => firstname; set => firstname = value; }
-        public string Lastname { get => lastname; set => lastname = value; }
-        public string UserName1 { get => UserName; set => UserName = value; }
-        public bool IsApproved1 { get => IsApproved; set => IsApproved = value; }
+        private bool isLocketOut = false;
+
+        private DateTime createdDate = DateTime.Now;
+
+        private DateTime? lastModifiedDate;
+
+        private DateTime? lastLockOutDate;
+
+        public bool IsApproved { get => isApproved; set => isApproved = value; }
         public bool IsLocketOut { get => isLocketOut; set => isLocketOut = value; }
-        public DateTime CreatedDate1 { get => CreatedDate; set => CreatedDate = value; }
-        public DateTime? LastModifiedDate1 { get => LastModifiedDate; set => LastModifiedDate = value; }
-        public DateTime? LastLockOutDate1 { get => LastLockOutDate; set => LastLockOutDate = value; }
+        public DateTime CreatedDate { get => createdDate; set => createdDate = value; }
+        public DateTime? LastModifiedDate { get => lastModifiedDate; set => lastModifiedDate = value; }
+        public DateTime? LastLockOutDate { get => lastLockOutDate; set => lastLockOutDate = value; }
         public Employee Employee { get => employee; set => employee = value; }
     }
 }

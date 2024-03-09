@@ -10,27 +10,17 @@ namespace frontorigins.Domain.entities
 
         private DateTime? actualReturnDate;
 
-        private BusinessRequirement BusinessRequirement;
-        private Employee employee;
+        private BusinessEquipment businessEquipment;
 
         public LendingEquipment(long id) : base(id)
         {
         }
 
-        public LendingEquipment(long id, DateTime lendDate, DateTime? expectedReturnDate, DateTime? actualReturnDate, BusinessRequirement businessEquitement, Employee employee) : base(id)
-        {
-            this.lendDate = lendDate;
-            this.expectedReturnDate = expectedReturnDate;
-            this.actualReturnDate = actualReturnDate;
-            BusinessRequirement = businessEquitement;
-            this.employee = employee;
-        }
 
         public DateTime LendDate { get => lendDate; set => lendDate = value; }
         public DateTime? ExpectedReturnDate { get => expectedReturnDate; set => expectedReturnDate = value; }
         public DateTime? ActualReturnDate { get => actualReturnDate; set => actualReturnDate = value; }
-        public BusinessRequirement BusinessEquitement1 { get => BusinessRequirement; set => BusinessRequirement = value; }
-        public Employee Employee { get => employee; set => employee = value; }
+        public BusinessEquipment Equipement { get => businessEquipment; set => businessEquipment = value; }
 
         public override bool Equals(object? obj)
         {
@@ -42,8 +32,8 @@ namespace frontorigins.Domain.entities
                    lendDate == equipment.lendDate &&
                    expectedReturnDate == equipment.expectedReturnDate &&
                    actualReturnDate == equipment.actualReturnDate &&
-                   EqualityComparer<BusinessRequirement>.Default.Equals(BusinessRequirement, equipment.BusinessRequirement) &&
-                   EqualityComparer<Employee>.Default.Equals(employee, equipment.employee);
+                   EqualityComparer<BusinessEquipment>.Default.Equals(businessEquipment, equipment.businessEquipment);
+                   
         }
 
         public override int GetHashCode()
@@ -56,8 +46,7 @@ namespace frontorigins.Domain.entities
             hash.Add(lendDate);
             hash.Add(expectedReturnDate);
             hash.Add(actualReturnDate);
-            hash.Add(BusinessRequirement);
-            hash.Add(employee);
+            hash.Add(businessEquipment);
             return hash.ToHashCode();
         }
     }

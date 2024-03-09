@@ -25,16 +25,7 @@ namespace frontorigins.Domain.entities
         {
         }
 
-        public Education(long id, string institutionName, string degreeLevel, string description, DateTime yearBeginning, DateTime yearCompletion, string major) : base(id)
-        {
-            this.institutionName = institutionName;
-            this.degreeLevel = degreeLevel;
-            this.description = description;
-            this.yearBeginning = yearBeginning;
-            this.yearCompletion = yearCompletion;
-            this.major = major;
-        }
-
+      
         public string InstitutionName { get => institutionName; set => institutionName = value; }
         public string DegreeLevel { get => degreeLevel; set => degreeLevel = value; }
         public string Description { get => description; set => description = value; }

@@ -26,15 +26,7 @@ namespace frontorigins.Domain.entities
         {
         }
 
-        public Organization(long id, string description, string name, string phone, string taxNumber, Address location, ICollection<Departement> departements) : base(id)
-        {
-            this.description = description;
-            this.name = name;
-            this.phone = phone;
-            this.taxNumber = taxNumber;
-            this.location = location;
-            this.departments = departements;
-        }
+        
 
         public string Description { get => description; set => description = value; }
         public string Name { get => name; set => name = value; }
