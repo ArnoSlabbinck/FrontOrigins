@@ -5,30 +5,24 @@ namespace frontorigins.Domain.aggregates
     public record Address 
     {
 
-        private string streetAddress { get; }
+        public string streetAddress { get; private set; }
 
-        public string city { get; }
+        public string city { get; private set; }
 
-        public string state { get; }
+        public string state { get; private set; }
 
-        public string zipCode { get; }
+        public string zipCode { get; private set; }
 
 
-        public string country { get; }
+        public string country { get; private set; }
 
-        private Address(string streetAddress, string city, string state, string zipCode, string country)
+        public Address(string streetAddress, string city, string state, string zipCode, string country)
         {
             this.streetAddress = streetAddress;
             this.city = city;
             this.state = state;
             this.zipCode = zipCode;
             this.country = country;
-        }
-
-        public static Address Create(string streetAddress, string city, string state, string zipCode, string country)
-            // Check street and zipCode validity
-
-            return new Address(streetAddress, city, state, zipCode, country);
         }
     }
 }
