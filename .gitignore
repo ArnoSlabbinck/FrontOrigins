@@ -239,3 +239,9 @@ _Pvt_Extensions
  
 # FAKE - F# Make 
 .fake/ 
+.vs
+frontorigins.Application
+frontorigins.webapi
+frontorigins.Shared
+frontorigins.infrastructure
+frontorigins.Domain
