@@ -10,11 +10,11 @@ namespace frontorigins.Domain.entities
 
         private TimeOnly endTime;
 
-        private TimeOnly Overtime;
+        private TimeOnly overtime;
 
         private int workingHours;
 
-        private string timesheetStatus;
+        private TimeSheetStatus timesheetStatus;
 
         private bool isHoliday;
 
@@ -24,24 +24,14 @@ namespace frontorigins.Domain.entities
         {
         }
 
-        public Timesheet(long id, DateTime workDay, TimeOnly startTime, TimeOnly endTime, TimeOnly overtime, int workingHours, string timesheetStatus, bool isHoliday, string comment) : base(id)
-        {
-            this.workDay = workDay;
-            this.startTime = startTime;
-            this.endTime = endTime;
-            Overtime = overtime;
-            this.workingHours = workingHours;
-            this.timesheetStatus = timesheetStatus;
-            this.isHoliday = isHoliday;
-            this.comment = comment;
-        }
+        
 
         public DateTime WorkDay { get => workDay; set => workDay = value; }
         public TimeOnly StartTime { get => startTime; set => startTime = value; }
         public TimeOnly EndTime { get => endTime; set => endTime = value; }
-        public TimeOnly Overtime1 { get => Overtime; set => Overtime = value; }
+        public TimeOnly Overtime { get => overtime; set => overtime = value; }
         public int WorkingHours { get => workingHours; set => workingHours = value; }
-        public string TimesheetStatus { get => timesheetStatus; set => timesheetStatus = value; }
+        public TimeSheetStatus TimesheetStatus { get => timesheetStatus; set => timesheetStatus = value; }
         public bool IsHoliday { get => isHoliday; set => isHoliday = value; }
         public string Comment { get => comment; set => comment = value; }
 
@@ -59,8 +49,7 @@ namespace frontorigins.Domain.entities
                    workingHours == timesheet.workingHours &&
                    timesheetStatus == timesheet.timesheetStatus &&
                    isHoliday == timesheet.isHoliday &&
-                   comment == timesheet.comment &&
-                   Comment == timesheet.Comment;
+                   comment == timesheet.comment 
         }
 
         public override int GetHashCode()

@@ -14,15 +14,6 @@ namespace frontorigins.Domain.entities
         public Position(long id) : base(id)
         {
         }
-
-        public Position(long id, string title, string description, DateTime startdate, DateTime? enddate) : base(id)
-        {
-            this.title = title;
-            this.description = description;
-            this.startdate = startdate;
-            this.enddate = enddate;
-        }
-
         public string Title { get => title; set => title = value; }
         public string Description { get => description; set => description = value; }
         public DateTime Startdate { get => startdate; set => startdate = value; }

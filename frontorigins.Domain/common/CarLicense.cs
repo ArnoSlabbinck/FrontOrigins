@@ -14,13 +14,13 @@ namespace frontorigins.Domain.common
 
     namespace frontorigins.Domain.common
     {
-        public enum License
+        public enum CarLicense
         {
             AM,
             A1,
             B,
             C,
-            None,
+            None
 
         }
     }
