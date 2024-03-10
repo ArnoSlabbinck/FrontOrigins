@@ -18,18 +18,11 @@ namespace frontorigins.Domain.entities
         {
         }
 
-        public EquipmentCondition(long id, DateTime checkDate, string condition, string notes, Employee checkedBy) : base(id)
-        {
-            this.checkDate = checkDate;
-            this.condition = condition;
-            this.notes = notes;
-            this.checkedBy = checkedBy;
-        }
 
         public DateTime CheckDate { get => checkDate; set => checkDate = value; }
         public string Condition { get => condition; set => condition = value; }
         public string Notes { get => notes; set => notes = value; }
-        public Employee CheckedBy { get => checkedBy; set => checkedBy = value; }
+        public virtual Employee CheckedBy { get => checkedBy; set => checkedBy = value; }
 
         public override bool Equals(object? obj)
         {

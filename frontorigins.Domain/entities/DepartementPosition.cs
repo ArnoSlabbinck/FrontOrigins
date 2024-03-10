@@ -9,22 +9,16 @@ namespace frontorigins.Domain.entities
 {
     public class DepartmentPosition : BaseEntity
     {
-        private Employee employee;
-        private Position position;
-
-      
         public DepartmentPosition(long id) : base(id)
         {
         }
 
-        public DepartmentPosition(long id, Employee employee, Position position) : base(id)
-        {
-            this.employee = employee;
-            this.position = position;
-        }
+        private Employee employee;
+        private Position position;
 
-        public Employee Employee { get => employee; set => employee = value; }
-        public Position Position { get => position; set => position = value; }
+
+        public virtual Employee Employee { get => employee; set => employee = value; }
+        public virtual Position Position { get => position; set => position = value; }
 
         public override bool Equals(object? obj)
         {

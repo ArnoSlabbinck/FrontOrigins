@@ -1,4 +1,5 @@
 ﻿using frontorigins.Domain.common;
+using System.ComponentModel.DataAnnotations;
 
 namespace frontorigins.Domain.entities
 {
@@ -6,33 +7,24 @@ namespace frontorigins.Domain.entities
     {
         private string title;
 
-        private string description;
+        private string? description;
 
-        private string supervisorName;
-
-        private string supervisorContact;
+      
+        private string companyName;
 
         private DateTime employementStartDate;
+
         private DateTime employmentEndDate;
 
         public WorkExperience(long id) : base(id)
         {
         }
 
-        public WorkExperience(long id, string title, string description, string supervisorName, string supervisorContact, DateTime employementStartDate, DateTime employmentEndDate) : base(id)
-        {
-            this.title = title;
-            this.description = description;
-            this.supervisorName = supervisorName;
-            this.supervisorContact = supervisorContact;
-            this.employementStartDate = employementStartDate;
-            this.employmentEndDate = employmentEndDate;
-        }
+       
 
         public string Title { get => title; set => title = value; }
         public string Description { get => description; set => description = value; }
-        public string SupervisorName { get => supervisorName; set => supervisorName = value; }
-        public string SupervisorContact { get => supervisorContact; set => supervisorContact = value; }
+        public string CompanyName { get => companyName; set => companyName = value; }
         public DateTime EmployementStartDate { get => employementStartDate; set => employementStartDate = value; }
         public DateTime EmploymentEndDate { get => employmentEndDate; set => employmentEndDate = value; }
 
@@ -45,8 +37,7 @@ namespace frontorigins.Domain.entities
                    ModifiedDate == experience.ModifiedDate &&
                    title == experience.title &&
                    description == experience.description &&
-                   supervisorName == experience.supervisorName &&
-                   supervisorContact == experience.supervisorContact &&
+                   companyName == experience.companyName &&
                    employementStartDate == experience.employementStartDate &&
                    employmentEndDate == experience.employmentEndDate;
         }
@@ -60,8 +51,7 @@ namespace frontorigins.Domain.entities
             hash.Add(ModifiedDate);
             hash.Add(title);
             hash.Add(description);
-            hash.Add(supervisorName);
-            hash.Add(supervisorContact);
+            hash.Add(companyName);
             hash.Add(employementStartDate);
             hash.Add(employmentEndDate);
             return hash.ToHashCode();

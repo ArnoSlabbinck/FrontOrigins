@@ -1,42 +1,36 @@
 ﻿using frontorigins.Domain.common;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace frontorigins.Domain.entities
 {
-    public class Education : BaseEntity
+    public class Degree : BaseEntity
     {
+        public Degree(long id) : base(id)
+        {
+        }
+
+        
         private string institutionName;
 
-        private string degreeLevel;
+        
+        private CollegeDegree degreeLevel;
 
-        private string description;
+        private string? description;
 
         private DateTime yearBeginning;
 
         private DateTime yearCompletion;
 
+       
         private string major;
-
-        public Education(long id) : base(id)
-        {
-        }
-
-        public Education(long id, string institutionName, string degreeLevel, string description, DateTime yearBeginning, DateTime yearCompletion, string major) : base(id)
-        {
-            this.institutionName = institutionName;
-            this.degreeLevel = degreeLevel;
-            this.description = description;
-            this.yearBeginning = yearBeginning;
-            this.yearCompletion = yearCompletion;
-            this.major = major;
-        }
-
+       
         public string InstitutionName { get => institutionName; set => institutionName = value; }
-        public string DegreeLevel { get => degreeLevel; set => degreeLevel = value; }
+        public CollegeDegree DegreeLevel { get => degreeLevel; set => degreeLevel = value; }
         public string Description { get => description; set => description = value; }
         public DateTime YearBeginning { get => yearBeginning; set => yearBeginning = value; }
         public DateTime YearCompletion { get => yearCompletion; set => yearCompletion = value; }
@@ -44,7 +38,7 @@ namespace frontorigins.Domain.entities
 
         public override bool Equals(object? obj)
         {
-            return obj is Education education &&
+            return obj is Degree education &&
                    base.Equals(obj) &&
                    Id == education.Id &&
                    CreatedDate == education.CreatedDate &&

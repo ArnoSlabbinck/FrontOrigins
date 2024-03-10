@@ -1,41 +1,38 @@
 ﻿using frontorigins.Domain.aggregates;
 using frontorigins.Domain.common;
+using System.ComponentModel.DataAnnotations;
 
 namespace frontorigins.Domain.entities
 {
-    public class Departement : BaseEntity
+    public class Department : BaseEntity
     {
+        [Required(ErrorMessage = "Every department has a name")]
         private string sector;
 
-        private Address Location;
+        private Address location;
 
-        public Departement(long id) : base(id)
+        public Department(long id) : base(id)
         {
         }
 
-        public Departement(long id, string sector, Address location) : base(id)
-        {
-            this.sector = sector;
-            Location = location;
-        }
-
+      
         public string Sector { get => sector; set => sector = value; }
-        public Address Location1 { get => Location; set => Location = value; }
+        public virtual Address Location { get => location; set => location = value; }
 
         public override bool Equals(object? obj)
         {
-            return obj is Departement departement &&
+            return obj is Department departement &&
                    base.Equals(obj) &&
                    Id == departement.Id &&
                    CreatedDate == departement.CreatedDate &&
                    ModifiedDate == departement.ModifiedDate &&
                    sector == departement.sector &&
-                   EqualityComparer<Address>.Default.Equals(Location, departement.Location);
+                   EqualityComparer<Address>.Default.Equals(location, departement.location);
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(base.GetHashCode(), Id, CreatedDate, ModifiedDate, sector, Location);
+            return HashCode.Combine(base.GetHashCode(), Id, CreatedDate, ModifiedDate, sector, location);
         }
     }
 }

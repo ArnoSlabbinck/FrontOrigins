@@ -2,6 +2,7 @@
 using frontorigins.Domain.common;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,34 +11,26 @@ namespace frontorigins.Domain.entities
 {
     public class Client : BaseEntity
     {
+        
         private string companyName;
 
         private string industry;
 
         private string email;
-
+        
         private string clientName;
 
         private string clientPhone;
 
         private DateTime? lastContactDate;
 
-        private Address Address;
+        
+        private Address address;
 
         public Client(long id) : base(id)
         {
         }
 
-        public Client(long id, string companyName, string industry, string email, string clientName, string clientPhone, DateTime? lastContactDate, Address address) : base(id)
-        { 
-            this.companyName = companyName;
-            this.industry = industry;
-            this.email = email;
-            this.clientName = clientName;
-            this.clientPhone = clientPhone;
-            this.lastContactDate = lastContactDate;
-            Address = address;
-        }
 
         public string CompanyName { get => companyName; set => companyName = value; }
         public string Industry { get => industry; set => industry = value; }
@@ -45,7 +38,7 @@ namespace frontorigins.Domain.entities
         public string ClientName { get => clientName; set => clientName = value; }
         public string ClientPhone { get => clientPhone; set => clientPhone = value; }
         public DateTime? LastContactDate { get => lastContactDate; set => lastContactDate = value; }
-        public Address Address1 { get => Address; set => Address = value; }
+        public Address Address { get => address; set => address = value; }
 
         public override bool Equals(object? obj)
         {

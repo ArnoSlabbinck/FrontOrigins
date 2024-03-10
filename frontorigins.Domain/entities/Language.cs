@@ -8,13 +8,6 @@ namespace frontorigins.Domain.entities
         {
         }
 
-        public Language(long id, string name, string level, ICollection<Employee> employees) : base(id)
-        {
-            this.Name = name;
-            this.Level = level;
-            this.Employees = employees;
-        }
-
         private string name;
 
         private string level;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,8 @@ namespace frontorigins.Domain.common
 {
     public abstract class BaseEntity
     {
+
+        [Key]
         public virtual long Id { get; protected set; }
 
         public virtual DateTime CreatedDate { get; protected set; }
