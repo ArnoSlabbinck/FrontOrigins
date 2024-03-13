@@ -49,7 +49,7 @@ namespace frontorigins.Domain.entities
                    workingHours == timesheet.workingHours &&
                    timesheetStatus == timesheet.timesheetStatus &&
                    isHoliday == timesheet.isHoliday &&
-                   comment == timesheet.comment 
+                   comment == timesheet.comment; 
         }
 
         public override int GetHashCode()

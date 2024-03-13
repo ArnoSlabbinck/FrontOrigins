@@ -6,8 +6,12 @@ namespace frontorigins.Domain.entities
 {
     public class Department : BaseEntity
     {
-        [Required(ErrorMessage = "Every department has a name")]
+        
         private string sector;
+
+        private string mail;
+
+        private string phone;
 
         private Address location;
 
@@ -17,6 +21,10 @@ namespace frontorigins.Domain.entities
 
       
         public string Sector { get => sector; set => sector = value; }
+
+        public string Mail { get => mail; set => mail = value; }
+        
+        public string Phone { get => phone; set => phone = value; }
         public virtual Address Location { get => location; set => location = value; }
 
         public override bool Equals(object? obj)

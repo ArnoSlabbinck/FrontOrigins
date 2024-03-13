@@ -1,12 +1,15 @@
 using frontorigins.Infrastructure.database;
+using FluentValidation;
 
 using Microsoft.EntityFrameworkCore;
+using frontorigins.Application.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder = AddValidators(builder);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -33,3 +36,20 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
+static WebApplicationBuilder AddValidators(WebApplicationBuilder builder)
+{
+    builder.Services.AddValidatorsFromAssemblyContaining<UserValidator>();
+    builder.Services.AddValidatorsFromAssemblyContaining<AddressValidation>();
+    builder.Services.AddValidatorsFromAssemblyContaining<ClientValidator>();
+    builder.Services.AddValidatorsFromAssemblyContaining<CompanyValidator>();
+    builder.Services.AddValidatorsFromAssemblyContaining<DegreeValidator>();
+    builder.Services.AddValidatorsFromAssemblyContaining<EmployeeValidator>();
+    builder.Services.AddValidatorsFromAssemblyContaining<DepartmentValidator>();
+    builder.Services.AddValidatorsFromAssemblyContaining<WorkExperienceValidator>();
+    builder.Services.AddValidatorsFromAssemblyContaining<BusinessEquipementValidator>();
+
+    return builder;
+
+}
