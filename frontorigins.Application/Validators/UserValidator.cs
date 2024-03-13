@@ -14,21 +14,16 @@ namespace frontorigins.Application.Validators
         public UserValidator()
         {
             RuleFor(x => x.UserName)
-                .NotEmpty()
+                .NotEmpty().WithMessage("Username is required")
                 .MaximumLength(20);
-
-            RuleFor( x => x.Firstname)
-                .NotEmpty()
-                .MaximumLength(50);
-
-            RuleFor(x => x.Lastname)
-                .NotEmpty()
-                .MaximumLength(50);
 
             RuleFor(x => x.Email)
                 .NotEmpty()
                 .EmailAddress()
                 .MaximumLength(50);
+
+            RuleFor(x => x.Employee)
+                .SetValidator(new EmployeeValidator());
             
         }
     }
