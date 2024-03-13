@@ -4,9 +4,6 @@ namespace frontorigins.Domain.entities
 {
     public class User : IdentityUser
     {
-        private string firstname;
-
-        private string lastname;
 
         private bool isApproved;
 
@@ -19,10 +16,6 @@ namespace frontorigins.Domain.entities
         private DateTime? lastLockOutDate;
 
         private Employee employee;
-
-      
-        public string Firstname { get => firstname; set => firstname = value; }
-        public string Lastname { get => lastname; set => lastname = value; }
         public string UserName { get => base.UserName; set => base.UserName = value; }
         public bool IsApproved { get => isApproved; set => isApproved = value; }
         public bool IsLocketOut { get => isLocketOut; set => isLocketOut = value; }

@@ -22,8 +22,6 @@ namespace frontorigins.Domain.entities
 
         private string workEmail;
 
-       
-        private string email;
 
         private string bankAccountNumber;
 
@@ -33,10 +31,6 @@ namespace frontorigins.Domain.entities
         private string nationalRegisterNumber;
 
         private string birthPlace;
-
-       
-        private string? mobilePhone;
-
 
         
         private string workPhone;
@@ -57,7 +51,6 @@ namespace frontorigins.Domain.entities
         private bool isCandidate = true;
         private bool isConsultant = false;
 
-        [Required(ErrorMessage = "An Employee needs to have an address ")]
         private Address address;
 
         private  ICollection<Timesheet> timesheets;
@@ -103,7 +96,7 @@ namespace frontorigins.Domain.entities
         public virtual ICollection<Timesheet> Timesheets { get => timesheets; set => timesheets = value; }
         public virtual Department Departement { get => departement; set => departement = value; }
         public virtual Position Job { get => job; set => job = value; }
-        public virtual ICollection<WorkExperience> PreviousJobs { get => workexperiences; set => workexperiences = value; }
+        public virtual ICollection<WorkExperience> WorkExperiences { get => workexperiences; set => workexperiences = value; }
         public virtual LendingEquipment LendingEquipement { get => lendingEquipement; set => lendingEquipement = value; }
         public virtual ICollection<Degree> Degrees { get => degrees; set => degrees = value; }
         public virtual ICollection<Language> Languages { get => languages; set => languages = value; }
