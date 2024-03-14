@@ -24,6 +24,8 @@ namespace frontorigins.Application.Validators
             RuleFor(x => x.Location)
                 .SetValidator(new AddressValidation());
 
+          
+
 
         }
     }

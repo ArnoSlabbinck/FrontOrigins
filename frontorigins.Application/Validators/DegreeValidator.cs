@@ -23,7 +23,16 @@ namespace frontorigins.Application.Validators
                 .MaximumLength(50);
 
             RuleFor(x => x.Description)
-                .MaximumLength(250);
+                .MaximumLength(250).WithMessage("Description can't be more than 250 characters");
+
+            RuleFor(x => x.YearBeginning)
+                .NotEmpty().WithMessage("Year of Beginning can't be empty")
+                .LessThanOrEqualTo(v => v.YearCompletion).WithErrorCode("Your start year can't lay in the future");
+
+            RuleFor(x => x.YearCompletion)
+                .NotEmpty().WithMessage("Year of completion can't be empty")
+                .GreaterThan(x => x.YearBeginning).WithErrorCode("The year of completion can't be before year of the beginning");
+
 
             
                 

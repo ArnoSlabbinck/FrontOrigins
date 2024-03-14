@@ -76,12 +76,10 @@ namespace frontorigins.Domain.entities
         public string FirstName { get => firstName; set => firstName = value; }
         public string LastName { get => lastName; set => lastName = value; }
         public string WorkEmail { get => workEmail; set => workEmail = value; }
-        public string Email { get => email; set => email = value; }
         public string BankAccountNumber { get => bankAccountNumber; set => bankAccountNumber = value; }
         public string IdentityNumber { get => identityNumber; set => identityNumber = value; }
         public string NationalRegisterNumber { get => nationalRegisterNumber; set => nationalRegisterNumber = value; }
         public string BirthPlace { get => birthPlace; set => birthPlace = value; }
-        public string MobilePhone { get => mobilePhone; set => mobilePhone = value; }
         public string WorkPhone { get => workPhone; set => workPhone = value; }
         public DateTime BirthDate { get => birthDate; set => birthDate = value; }
         public string Nationality { get => nationality; set => nationality = value; }
