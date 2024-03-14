@@ -21,11 +21,11 @@ namespace frontorigins.Application.Validators
                 .NotEmpty().WithMessage("Employee needs to have a last name")
                 .MaximumLength(50);
 
-            RuleFor(x => x.Email)
+            RuleFor(x => x.WorkEmail)
                 .NotEmpty().WithMessage("Email Address is required")
                 .EmailAddress().WithMessage("Please an valid Employee Mail address");
 
-            RuleFor(x => x.MobilePhone)
+            RuleFor(x => x.WorkPhone)
                 .NotEmpty()
                 .NotNull().WithMessage("Phone Number is required.")
                 .MinimumLength(10).WithMessage("PhoneNumber must not be less than 10 characters.")
