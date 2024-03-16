@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "frontorigins.Application", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "frontorigins.Shared", "frontorigins.Shared\frontorigins.Shared.csproj", "{8AEDF7A4-99E3-418B-A7FF-F50665490786}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "frontorigins.webapi", "frontorigins.webapi\frontorigins.webapi.csproj", "{ED7A81D5-E4FD-4E8B-B763-AA1BEC5253DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "frontorigins.webapi", "frontorigins.webapi\frontorigins.webapi.csproj", "{ED7A81D5-E4FD-4E8B-B763-AA1BEC5253DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "frontorigins.Testing", "frontorigins.Testing\frontorigins.Testing.csproj", "{5FDF01EC-562B-4BDA-9E63-1F030F7180BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{ED7A81D5-E4FD-4E8B-B763-AA1BEC5253DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED7A81D5-E4FD-4E8B-B763-AA1BEC5253DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED7A81D5-E4FD-4E8B-B763-AA1BEC5253DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FDF01EC-562B-4BDA-9E63-1F030F7180BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FDF01EC-562B-4BDA-9E63-1F030F7180BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FDF01EC-562B-4BDA-9E63-1F030F7180BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FDF01EC-562B-4BDA-9E63-1F030F7180BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
