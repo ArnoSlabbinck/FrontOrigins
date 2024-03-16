@@ -11,6 +11,11 @@ namespace frontorigins.Infrastructure.database
 {
     public class ApplicationDbContext : DbContext
     {
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.EnableSensitiveDataLogging();
+            base.OnConfiguring(optionsBuilder);
+        }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }

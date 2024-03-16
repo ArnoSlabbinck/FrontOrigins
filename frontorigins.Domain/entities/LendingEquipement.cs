@@ -12,7 +12,6 @@ namespace frontorigins.Domain.entities
 
         private BusinessEquipement businessRequirement;
 
-
         public LendingEquipment(long id) : base(id)
         {
         }
@@ -20,7 +19,7 @@ namespace frontorigins.Domain.entities
         public DateTime LendDate { get => lendDate; set => lendDate = value; }
         public DateTime? ExpectedReturnDate { get => expectedReturnDate; set => expectedReturnDate = value; }
         public DateTime? ActualReturnDate { get => actualReturnDate; set => actualReturnDate = value; }
-        public virtual BusinessEquipement BusinessEquitement1 { get => businessRequirement; set => businessRequirement = value; }
+        public virtual BusinessEquipement BusinessEquitement { get => businessRequirement; set => businessRequirement = value; }
        
 
         public override bool Equals(object? obj)

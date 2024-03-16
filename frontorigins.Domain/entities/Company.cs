@@ -27,8 +27,7 @@ namespace frontorigins.Domain.entities
         {
         }
 
-        
-
+     
         public string Description { get => description; set => description = value; }
         public string Name { get => name; set => name = value; }
         public string TaxNumber { get => taxNumber; set => taxNumber = value; }

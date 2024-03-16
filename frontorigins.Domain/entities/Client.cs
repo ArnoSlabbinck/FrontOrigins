@@ -11,7 +11,6 @@ namespace frontorigins.Domain.entities
 {
     public class Client : BaseEntity
     {
-        
         private string companyName;
 
         private string industry;
