@@ -13,7 +13,30 @@ namespace frontorigins.Infrastructure.Seed
     {
         public void Configure(EntityTypeBuilder<Employee> builder)
         {
-            throw new NotImplementedException();
+            builder.HasData(OnSeedingEmployees());
         }
+
+        private List<Employee> OnSeedingEmployees()
+        {
+            var employees = new List<Employee>
+            {
+                new Employee(1)
+                {
+                    FirstName = "Arno",
+                    LastName = "Slabbinck",
+                    MobilePhone = "+32472741605",
+                    Email = "Arno.Slabbinck@gmail.com",
+                    Gender = Domain.common.Gender.Male,
+                    Nationality = "Belg", 
+                    BankAccountNumber = "5398 5312 4598 3723", 
+                    BirthDate = DateTime.Now, 
+                    BirthPlace = "Jette"
+                }
+            };
+
+            return employees;
+        }
+
+     
     }
 }
