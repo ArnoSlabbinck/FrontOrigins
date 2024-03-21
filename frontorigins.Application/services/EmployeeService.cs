@@ -17,24 +17,26 @@ namespace frontorigins.Application.services
             EmployeeRepository = employeeRepository;
         }
 
-        public void AddEmployee(Employee employee, CancellationToken cancellationToken)
+        public async Task AddEmployee(Employee employee, CancellationToken cancellationToken)
         {
-               
+            await EmployeeRepository.Add(employee, cancellationToken);
+           
+            
         }
 
-        public void DeleteEmployee(int id, CancellationToken cancellationToken)
+        public async Task DeleteEmployee(int id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            await EmployeeRepository.Delete(id, cancellationToken);
         }
 
-        public Task<Employee> GetEmployee(int id, CancellationToken cancellationToken)
+        public async Task<Employee> GetEmployee(int id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await EmployeeRepository.GetById(id, cancellationToken);
         }
 
-        public void UpdateEmployee(Employee employee, CancellationToken cancellationToken)
+        public async Task UpdateEmployee(Employee employee, int id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            await EmployeeRepository.Update(employee, id, cancellationToken);
         }
     }
 }
