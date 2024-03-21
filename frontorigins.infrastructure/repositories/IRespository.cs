@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace frontorigins.Infrastructure.repositories
 {
-    public interface IRespository<TEntity> where TEntity : BaseEntity
+    public interface IRespository<TEntity> where TEntity :  class
     {
         Task<IQueryable<TEntity>> GetAll(CancellationToken cancellationToken);
         Task<TEntity> GetById(int id, CancellationToken cancellationToken);
 
-        void Add(TEntity entity, CancellationToken cancellationToken);
+        Task Add(TEntity entity, CancellationToken cancellationToken);
 
-        void Update(TEntity entity, int id, CancellationToken cancellationToken);
+        Task Update(TEntity entity, int id, CancellationToken cancellationToken);
 
-        void Delete(int id, CancellationToken cancellationToken);
+        Task Delete(int id, CancellationToken cancellationToken);
 
     }
 }
