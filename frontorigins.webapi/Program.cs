@@ -1,3 +1,12 @@
+using frontorigins.Application.services;
+using frontorigins.Domain.common;
+using Microsoft.EntityFrameworkCore;
+using frontorigins.Infrastructure.configuation;
+using Microsoft.OpenApi.Models;
+using System.Runtime.CompilerServices;
+using Microsoft.Extensions.Configuration;
+using frontorigins.Application.configuration;
+using frontorigins.Infrastructure.database;
 using frontorigins.Infrastructure.database;
 using FluentValidation;
 
@@ -6,19 +15,23 @@ using frontorigins.Application.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
 builder.Services.AddControllers();
 builder = AddValidators(builder);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "FrontOrigins.API", Version = "v1" });
+});
+builder.Services.AddScoped<DbContext, ApplicationDbContext>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-{
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
-});
+builder.Services.AddRepositoryConnector(builder.Configuration, connectionString );
+builder.Services.AddServiceConnector();
+
+
 
 var app = builder.Build();
 
