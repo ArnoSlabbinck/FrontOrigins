@@ -1,27 +1,27 @@
 ﻿using frontorigins.Domain.entities;
+using frontorigins.Infrastructure.seed;
+using frontorigins.Infrastructure.Seed;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace frontorigins.Infrastructure.database
 {
     public class ApplicationDbContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.EnableSensitiveDataLogging();
-            base.OnConfiguring(optionsBuilder);
-        }
+        public ApplicationDbContext() { }
+       
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            
+            base.OnConfiguring(optionsBuilder);
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             modelBuilder.Entity<Employee>()
                 .OwnsOne(x => x.Address);
 
@@ -35,6 +35,8 @@ namespace frontorigins.Infrastructure.database
                 .OwnsOne(x => x.Location);
 
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfiguration(new SkillConfiguration());
         }
         public DbSet<Employee> Employees { get; set; }
 
