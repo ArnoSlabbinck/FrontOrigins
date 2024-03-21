@@ -23,4 +23,5 @@ Version.cpp
 .vs/VSWorkspaceState.json
 .vs/FrontOrigins/v17
 .vs/FrontOrigins
-
+frontorigins.webapi/obj
+frontorigins.Shared/obj
