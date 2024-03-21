@@ -1,6 +1,5 @@
 ﻿using frontorigins.Domain.entities;
 using frontorigins.Infrastructure.seed;
-using frontorigins.Infrastructure.Seed;
 using Microsoft.EntityFrameworkCore;
 
 namespace frontorigins.Infrastructure.database
