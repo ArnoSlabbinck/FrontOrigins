@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace frontorigins.Infrastructure.repositories
+namespace frontorigins.Infrastructure.unitofwork
 {
     public interface IUnitOfWork
     {
-        Task SaveAsync(DbContext context,CancellationToken cancellationToken);
+        Task SaveAsync(CancellationToken cancellationToken);
     }
 }
