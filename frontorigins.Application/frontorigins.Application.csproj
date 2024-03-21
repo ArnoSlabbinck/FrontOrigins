@@ -12,6 +12,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\frontorigins.Domain\frontorigins.Domain.csproj" />
+    <ProjectReference Include="..\frontorigins.Domain\frontorigins.Domain.csproj" />
+    <ProjectReference Include="..\frontorigins.infrastructure\frontorigins.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="validators\" />
   </ItemGroup>
 
 </Project>
