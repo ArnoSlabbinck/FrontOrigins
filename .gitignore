@@ -25,3 +25,6 @@ Version.cpp
 .vs/FrontOrigins
 frontorigins.webapi/obj
 frontorigins.Shared/obj
+frontorigins.Domain/entities/BusinessEquitement.cs
+frontorigins.webapi/Controllers/HomeController.cs
+frontorigins.sln
