@@ -19,8 +19,7 @@ namespace frontorigins.Domain.entities
         public DateTime LendDate { get => lendDate; set => lendDate = value; }
         public DateTime? ExpectedReturnDate { get => expectedReturnDate; set => expectedReturnDate = value; }
         public DateTime? ActualReturnDate { get => actualReturnDate; set => actualReturnDate = value; }
-        public virtual BusinessEquipement BusinessEquitement { get => businessRequirement; set => businessRequirement = value; }
-       
+        public BusinessEquipement BusinessRequirement { get => businessRequirement; set => businessRequirement = value; }
 
         public override bool Equals(object? obj)
         {
@@ -32,7 +31,7 @@ namespace frontorigins.Domain.entities
                    lendDate == equipment.lendDate &&
                    expectedReturnDate == equipment.expectedReturnDate &&
                    actualReturnDate == equipment.actualReturnDate &&
-                   EqualityComparer<BusinessEquipement>.Default.Equals(businessRequirement, equipment.businessRequirement);
+                   EqualityComparer<BusinessEquipement>.Default.Equals(BusinessRequirement, equipment.BusinessRequirement);
                    
         }
 
@@ -46,7 +45,7 @@ namespace frontorigins.Domain.entities
             hash.Add(lendDate);
             hash.Add(expectedReturnDate);
             hash.Add(actualReturnDate);
-            hash.Add(businessRequirement);
+            hash.Add(BusinessRequirement);
             return hash.ToHashCode();
         }
     }

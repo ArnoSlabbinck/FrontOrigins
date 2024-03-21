@@ -52,8 +52,7 @@ app.Run();
 
 
 static WebApplicationBuilder AddValidators(WebApplicationBuilder builder)
-{
-    builder.Services.AddValidatorsFromAssemblyContaining<UserValidator>();
+{ 
     builder.Services.AddValidatorsFromAssemblyContaining<AddressValidation>();
     builder.Services.AddValidatorsFromAssemblyContaining<ClientValidator>();
     builder.Services.AddValidatorsFromAssemblyContaining<CompanyValidator>();

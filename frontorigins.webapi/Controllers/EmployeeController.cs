@@ -20,7 +20,7 @@ namespace frontorigins.webapi.Controllers
             context = dbContext;
         }
 
-        [HttpGet(Routing.EmployeeHome)]
+        [HttpGet()]
         public IEnumerable<Employee> Index()
         {
             return null;
